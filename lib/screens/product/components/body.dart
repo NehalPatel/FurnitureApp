@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:furnitureapp/components/search_box.dart';
 import 'package:furnitureapp/constants.dart';
 import 'package:furnitureapp/models/product.dart';
-import 'package:furnitureapp/screens/details/details_screen.dart';
 
 import 'category_list.dart';
 import 'product_card.dart';
@@ -14,7 +13,9 @@ class Body extends StatelessWidget {
       bottom: false,
       child: Column(
         children: <Widget>[
-          SearchBox(onChanged: (value) {}),
+          SearchBox(onChanged: (value) {
+            print("search:" + value);
+          }),
           CategoryList(),
           SizedBox(height: kDefaultPadding / 2),
           Expanded(
@@ -38,14 +39,7 @@ class Body extends StatelessWidget {
                     itemIndex: index,
                     product: products[index],
                     press: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => DetailsScreen(
-                            product: products[index],
-                          ),
-                        ),
-                      );
+                      Navigator.of(context).pushNamed('/details', arguments: products[index]);
                     },
                   ),
                 )

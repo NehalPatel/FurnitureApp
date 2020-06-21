@@ -18,21 +18,21 @@ class ProductScreen extends StatelessWidget {
 
   AppBar buildAppBar() {
     return AppBar(
-    elevation: 0,
-    centerTitle: false,
-    title: Text('Shree Creation'),
-    leading: IconButton(
-      padding: EdgeInsets.only(left: kDefaultPadding),
-      icon: SvgPicture.asset("assets/icons/shopping-bag.svg"), onPressed: () {  },
-    ),
-    actions: <Widget>[
-      IconButton(
-        icon: SvgPicture.asset("assets/icons/notification.svg"),
-        onPressed: () {
-          print('clicked');
-        }
+      elevation: 0,
+      centerTitle: false,
+      title: Text('Shree Creation'),
+      leading: IconButton(
+        padding: EdgeInsets.only(left: kDefaultPadding),
+        icon: SvgPicture.asset("assets/icons/shopping-bag.svg"), onPressed: () {  },
       ),
-    ]
-  );
+      actions: <Widget>[
+        IconButton(
+          icon: SvgPicture.asset("assets/icons/notification.svg"),
+          onPressed: () {
+            print('notification clicked');
+          }
+        ),
+      ]
+    );
   }
 }

@@ -28,13 +28,15 @@ class DetailsScreen extends StatelessWidget {
       ),
       centerTitle: false,
       title: Text(
-        'Back'.toUpperCase(),
+        'Product'.toUpperCase(),
         style: Theme.of(context).textTheme.bodyText2,
       ),
       actions: <Widget>[
         IconButton(
           icon: SvgPicture.asset('assets/icons/cart_with_item.svg'),
-          onPressed: () {},
+          onPressed: () {
+            print('cart icon clicked');
+          },
         ),
       ],
     );

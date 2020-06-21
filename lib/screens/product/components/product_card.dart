@@ -4,16 +4,17 @@ import 'package:furnitureapp/models/product.dart';
 import 'package:furnitureapp/constants.dart';
 
 class ProductCard extends StatelessWidget {
+
+  final int itemIndex;
+  final Product product;
+  final Function press;
+
   const ProductCard({
     Key key,
     this.itemIndex,
     this.product,
     this.press,
   }) : super(key: key);
-
-  final int itemIndex;
-  final Product product;
-  final Function press;
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +28,7 @@ class ProductCard extends StatelessWidget {
       // color: Colors.blueAccent,
       height: 160,
       child: InkWell(
-        onTap: (){
-          print( product );
-        },
+        onTap: this.press,
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: <Widget>[
@@ -54,7 +53,7 @@ class ProductCard extends StatelessWidget {
               top: 0,
               right: 0,
               child: Hero(
-                tag: 0,
+                tag: product.id,
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
                   height: 160,

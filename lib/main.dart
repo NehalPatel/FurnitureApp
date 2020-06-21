@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furnitureapp/constants.dart';
-import 'package:furnitureapp/screens/details/details_screen.dart';
-import 'package:furnitureapp/screens/product/products_screen.dart';
+import 'package:furnitureapp/routes/route_generator.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -22,10 +21,7 @@ class MyApp extends StatelessWidget {
       ),
       // home: ProductScreen(),
       initialRoute: '/',
-      routes: {
-        '/': (context) => ProductScreen(),
-        '/details': (context) => DetailsScreen(),
-      }
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }
