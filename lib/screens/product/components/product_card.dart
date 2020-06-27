@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:furnitureapp/models/product.dart';
-
-import 'package:furnitureapp/constants.dart';
+import 'package:shreecreations/models/product.dart';
+import 'package:shreecreations/constants.dart';
 
 class ProductCard extends StatelessWidget {
-
   final int itemIndex;
   final Product product;
   final Function press;
@@ -18,7 +16,6 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     Size size = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.symmetric(
@@ -43,9 +40,8 @@ class ProductCard extends StatelessWidget {
               child: Container(
                 margin: EdgeInsets.only(right: 10),
                 decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(22)
-                ),
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(22)),
               ),
             ),
             //our product image
@@ -77,30 +73,30 @@ class ProductCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Spacer(),
-                    Padding(padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                    child: Text(
+                    Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                      child: Text(
                         product.title,
                         style: Theme.of(context).textTheme.button,
                       ),
                     ),
                     Spacer(),
                     Container(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: kDefaultPadding*1.5,
-                        vertical: kDefaultPadding / 4,
-                      ),
-                      decoration: BoxDecoration(
-                        color: kSecondaryColor,
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(22),
-                          topRight: Radius.circular(22),
-                        )
-                      ),
-                      child: Text(
-                        "${product.price} INR",
-                        style: Theme.of(context).textTheme.button,
-                      )
-                    )
+                        padding: EdgeInsets.symmetric(
+                          horizontal: kDefaultPadding * 1.5,
+                          vertical: kDefaultPadding / 4,
+                        ),
+                        decoration: BoxDecoration(
+                            color: kSecondaryColor,
+                            borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(22),
+                              topRight: Radius.circular(22),
+                            )),
+                        child: Text(
+                          "${product.price} INR",
+                          style: Theme.of(context).textTheme.button,
+                        ))
                   ],
                 ),
               ),

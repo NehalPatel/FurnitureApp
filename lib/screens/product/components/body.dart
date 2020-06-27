@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:furnitureapp/components/search_box.dart';
-import 'package:furnitureapp/constants.dart';
-import 'package:furnitureapp/models/product.dart';
+import 'package:shreecreations/components/search_box.dart';
+import 'package:shreecreations/constants.dart';
+import 'package:shreecreations/models/product.dart';
 
 import 'category_list.dart';
 import 'product_card.dart';
@@ -39,7 +39,8 @@ class Body extends StatelessWidget {
                     itemIndex: index,
                     product: products[index],
                     press: () {
-                      Navigator.of(context).pushNamed('/details', arguments: products[index]);
+                      Navigator.of(context)
+                          .pushNamed('/details', arguments: products[index]);
                     },
                   ),
                 )
