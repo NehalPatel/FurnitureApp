@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:furnitureapp/constants.dart';
-import 'package:furnitureapp/models/product.dart';
-
+import 'package:furnitureapp/models/product-online.dart';
+import 'package:furnitureapp/screens/details/components/chat_and_add_to_cart.dart';
+import 'package:furnitureapp/screens/details/components/list_of_colors.dart';
+import 'package:furnitureapp/screens/details/components/product_poster.dart';
 
 class Body extends StatelessWidget {
   final Product product;
@@ -9,6 +11,7 @@ class Body extends StatelessWidget {
   const Body({Key key, this.product}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     // it enable scrolling on small devices
     return SafeArea(
       bottom: false,
@@ -32,24 +35,28 @@ class Body extends StatelessWidget {
                   Center(
                     child: Hero(
                       tag: '${product.id}',
-                      child: null,
+                      child: ProductPoster(size: size, image: product.image),
                     ),
                   ),
-                  //ListOfColors(),
+                  ListOfColors(),
                   Padding(
                     padding: const EdgeInsets.symmetric(
                         vertical: kDefaultPadding / 2),
-                    child: Text(
-                      product.title,
-                      style: Theme.of(context).textTheme.headline6,
+                    child: Center(
+                      child: Text(
+                        product.title,
+                        style: Theme.of(context).textTheme.headline6,
+                      ),
                     ),
                   ),
-                  Text(
-                    '\$${product.price}',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                      color: kSecondaryColor,
+                  Center(
+                    child: Text(
+                      '${product.price} INR',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                        color: kSecondaryColor,
+                      ),
                     ),
                   ),
                   Padding(
@@ -64,7 +71,7 @@ class Body extends StatelessWidget {
                 ],
               ),
             ),
-            //ChatAndAddToCart(),
+            ChatAndAddToCart(),
           ],
         ),
       ),

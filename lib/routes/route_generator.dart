@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furnitureapp/models/product.dart';
+import 'package:furnitureapp/models/product-online.dart';
 import 'package:furnitureapp/screens/details/details_screen.dart';
 import 'package:furnitureapp/screens/product/products_screen.dart';
 
@@ -17,8 +17,8 @@ class RouteGenerator {
         if (args is Product) {
           return MaterialPageRoute(
             builder: (_) => DetailsScreen(
-                  product: args,
-                ),
+              product: args,
+            ),
           );
         }
         // If args is not of the correct type, return an error page.

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:furnitureapp/models/product.dart';
+import 'package:furnitureapp/models/product-online.dart';
 
 import 'package:furnitureapp/constants.dart';
 
 class ProductCard extends StatelessWidget {
-
   final int itemIndex;
   final Product product;
   final Function press;
@@ -18,7 +17,6 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     Size size = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.symmetric(
@@ -28,7 +26,7 @@ class ProductCard extends StatelessWidget {
       // color: Colors.blueAccent,
       height: 160,
       child: InkWell(
-        onTap: this.press,
+        onTap: press,
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: <Widget>[
@@ -43,9 +41,8 @@ class ProductCard extends StatelessWidget {
               child: Container(
                 margin: EdgeInsets.only(right: 10),
                 decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(22)
-                ),
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(22)),
               ),
             ),
             //our product image
@@ -53,14 +50,14 @@ class ProductCard extends StatelessWidget {
               top: 0,
               right: 0,
               child: Hero(
-                tag: product.id,
+                tag: this.product.id,
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
                   height: 160,
                   // image is square but we add extra 20 + 20 padding thats why width is 200
                   width: 200,
                   child: Image.asset(
-                    product.image,
+                    this.product.image,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -77,30 +74,30 @@ class ProductCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Spacer(),
-                    Padding(padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                    child: Text(
+                    Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                      child: Text(
                         product.title,
                         style: Theme.of(context).textTheme.button,
                       ),
                     ),
                     Spacer(),
                     Container(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: kDefaultPadding*1.5,
-                        vertical: kDefaultPadding / 4,
-                      ),
-                      decoration: BoxDecoration(
-                        color: kSecondaryColor,
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(22),
-                          topRight: Radius.circular(22),
-                        )
-                      ),
-                      child: Text(
-                        "${product.price} INR",
-                        style: Theme.of(context).textTheme.button,
-                      )
-                    )
+                        padding: EdgeInsets.symmetric(
+                          horizontal: kDefaultPadding * 1.5,
+                          vertical: kDefaultPadding / 4,
+                        ),
+                        decoration: BoxDecoration(
+                            color: kSecondaryColor,
+                            borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(22),
+                              topRight: Radius.circular(22),
+                            )),
+                        child: Text(
+                          "${product.price} INR",
+                          style: Theme.of(context).textTheme.button,
+                        ))
                   ],
                 ),
               ),
