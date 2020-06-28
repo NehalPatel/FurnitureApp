@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:furnitureapp/constants.dart';
-
-import '../../../constants.dart';
-import '../../../constants.dart';
-import '../../../constants.dart';
-import '../../../constants.dart';
+import 'package:shreecreations/constants.dart';
 
 class ChatAndAddToCart extends StatelessWidget {
   @override

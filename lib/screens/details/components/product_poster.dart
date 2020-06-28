@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furnitureapp/constants.dart';
+import 'package:shreecreations/constants.dart';
 
 class ProductPoster extends StatelessWidget {
   const ProductPoster({

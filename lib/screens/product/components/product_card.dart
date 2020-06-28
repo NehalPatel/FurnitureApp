@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:furnitureapp/models/product-online.dart';
-
-import 'package:furnitureapp/constants.dart';
+import 'package:shreecreations/models/product.dart';
+import 'package:shreecreations/constants.dart';
 
 class ProductCard extends StatelessWidget {
   final int itemIndex;

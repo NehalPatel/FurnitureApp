@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'package:furnitureapp/constants.dart';
+import 'package:shreecreations/constants.dart';
 
 class ColorDot extends StatelessWidget {
   const ColorDot({
-    Key key, this.fillColor, this.isSelected = false,
+    Key key,
+    this.fillColor,
+    this.isSelected = false,
   }) : super(key: key);
 
   final Color fillColor;
@@ -18,13 +20,12 @@ class ColorDot extends StatelessWidget {
       height: 24,
       width: 24,
       decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          border: Border.all(
+        shape: BoxShape.circle,
+        border: Border.all(
             color: isSelected ? Color(0xFF707070) : Colors.transparent),
-            ),
+      ),
       child: Container(
-        decoration:
-            BoxDecoration(shape: BoxShape.circle, color: fillColor),
+        decoration: BoxDecoration(shape: BoxShape.circle, color: fillColor),
       ),
     );
   }

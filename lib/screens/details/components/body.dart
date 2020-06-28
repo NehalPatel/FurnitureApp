@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:furnitureapp/constants.dart';
-import 'package:furnitureapp/models/product-online.dart';
-import 'package:furnitureapp/screens/details/components/chat_and_add_to_cart.dart';
-import 'package:furnitureapp/screens/details/components/list_of_colors.dart';
-import 'package:furnitureapp/screens/details/components/product_poster.dart';
+import 'package:shreecreations/screens/details/components/chat_and_add_to_cart.dart';
+import 'package:shreecreations/screens/details/components/list_of_colors.dart';
+import 'package:shreecreations/screens/details/components/product_poster.dart';
+
+import 'package:shreecreations/constants.dart';
+import 'package:shreecreations/models/product.dart';
 
 class Body extends StatelessWidget {
   final Product product;

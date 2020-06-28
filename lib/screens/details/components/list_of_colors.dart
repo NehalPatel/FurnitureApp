@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:furnitureapp/screens/details/components/color_dots.dart';
-import 'package:furnitureapp/constants.dart';
+import 'package:shreecreations/screens/details/components/color_dots.dart';
+import 'package:shreecreations/constants.dart';
 
 class ListOfColors extends StatelessWidget {
   @override

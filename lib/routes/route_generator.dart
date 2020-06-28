@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:furnitureapp/models/product-online.dart';
-import 'package:furnitureapp/screens/details/details_screen.dart';
-import 'package:furnitureapp/screens/product/products_screen.dart';
+
+import 'package:shreecreations/models/product.dart';
+import 'package:shreecreations/screens/details/details_screen.dart';
+import 'package:shreecreations/screens/product/products_screen.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {

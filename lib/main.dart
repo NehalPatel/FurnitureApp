@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:furnitureapp/constants.dart';
-import 'package:furnitureapp/routes/route_generator.dart';
+import 'package:shreecreations/constants.dart';
+import 'package:shreecreations/routes/route_generator.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {

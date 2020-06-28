@@ -1,11 +1,11 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:furnitureapp/constants.dart';
+import 'package:shreecreations/constants.dart';
 
 class SearchBox extends StatelessWidget {
   const SearchBox({
-    Key key, this.onChanged,
+    Key key,
+    this.onChanged,
   }) : super(key: key);
   final ValueChanged onChanged;
 
@@ -15,7 +15,7 @@ class SearchBox extends StatelessWidget {
       margin: EdgeInsets.all(kDefaultPadding),
       padding: EdgeInsets.symmetric(
         horizontal: kDefaultPadding,
-        vertical: kDefaultPadding/4,
+        vertical: kDefaultPadding / 4,
       ),
       decoration: BoxDecoration(
         color: Colors.white.withOpacity(0.4),
