@@ -1,6 +1,6 @@
-# furnitureapp
+# Shree Creation Gift App
 
-Furniture Application Learning
+Shree Creation Gift Application
 
 ## Getting Started
 
