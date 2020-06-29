@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shreecreations/screens/loading.dart';
 
 import 'package:shreecreations/models/product.dart';
 import 'package:shreecreations/screens/details/details_screen.dart';
@@ -11,6 +12,8 @@ class RouteGenerator {
 
     switch (settings.name) {
       case '/':
+        return MaterialPageRoute(builder: (_) => Loading());
+      case '/home':
         return MaterialPageRoute(builder: (_) => ProductScreen());
       case '/details':
         // Validation of correct data type
